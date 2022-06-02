@@ -3,12 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_cors import CORS
 
-import os
+# import os
 
 app = Flask(__name__)
 CORS(app)
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.sqlite')
+# basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://rueqmgjeyqanwl:c14208eba3f507229fccb340274f86a52efa1779a69c4503710246f985da25d9@ec2-52-3-2-245.compute-1.amazonaws.com:5432/d8t6vnl66onjhg"
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
